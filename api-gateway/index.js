@@ -3,34 +3,33 @@ import dotenv from 'dotenv';
 import checkUser from './middleware/checkUser.js';
 dotenv.config();
 
+
+// Check if the environment is development
+const isDevelopment = process.env.NODE_ENV === 'development';
+
 const server = gateway({
     // Gateway routes
     routes: [
-        // {
-        //     // Auth Service
-        //     prefix: '/auth',
-        //     target: 'http://localhost:3001',
-        // },
         {
             // User Service
             prefix: '/users',
-            target: 'http://localhost:3001',
+            target: isDevelopment ? process.env.USER_SERVICE_URL : 'https://spyne-backend-user-service.onrender.com',
             // middlewares: [checkUser],
         },
         {
             // Discussion Service
             prefix: '/discussions',
-            target: 'http://localhost:3002'
+            target: isDevelopment ? process.env.DISCUSSION_SERVICE_URL : 'https://spayne-backend-discussion-service.onrender.com',
         },
         {
             // Comment Service
             prefix: '/comments',
-            target: 'http://localhost:3003'
+            target: isDevelopment ? process.env.COMMENT_SERVICE_URL : 'https://spyne-backend-comment-service.onrender.com',
         },
         {
             // Like Service
             prefix: '/likes',
-            target: 'http://localhost:3004'
+            target: isDevelopment ? process.env.LIKE_SERVICE_URL : 'https://spyne-backend-like-service.onrender.com',
         }
     ]
 });
