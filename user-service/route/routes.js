@@ -6,6 +6,7 @@ import getAllUsers from '../controller/getAllUsers.js';
 import searchUserByName from '../controller/searchUserByName.js';
 import updateUser from '../controller/updateUser.js';
 import deleteUser from '../controller/deleteUser.js';
+import followUser from '../controller/followUser.js';
 
 // initilized the router
 const router = express.Router();
@@ -18,6 +19,7 @@ router.post('/signup', userSignup); // signup route
 // routes with middleware
 router.get('/getAllUsers', auth, getAllUsers); // get all users route
 router.get('/searchUserByName/:name', auth, searchUserByName); // search user by name route
+router.post('/followUser/:userId', auth, followUser); // follow user route
 router.put('/updateUser/:userId', auth, updateUser); // update user route
 router.delete('/deleteUser/:userId', auth, deleteUser); // delete user route
 
