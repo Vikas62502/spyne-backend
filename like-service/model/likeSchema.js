@@ -20,7 +20,7 @@ const likeSchema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
-});
+}, { timestamp: true });
 
 const Like = mongoose.model('Like', likeSchema);
 export default Like;
