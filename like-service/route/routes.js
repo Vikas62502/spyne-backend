@@ -8,12 +8,10 @@ const router = express.Router();
 router.use(express.json()); // Parse JSON bodies
 
 // create like
-router.post('/like', auth, createLike);
+router.post('/createLike', auth, createLike);
 
 // delete like
-router.delete('/like/:likeId', auth, deleteLike);
-
-
+router.delete('/deleteLike/:likeId', auth, deleteLike);
 
 
 export default router;

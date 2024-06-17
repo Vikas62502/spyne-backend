@@ -7,7 +7,10 @@ const createComment = async (req, res) => {
         const comment = new Comment({ text, discussion: discussionId, user: req.user });
         await comment.save();
 
-        await Discussion.findByIdAndUpdate(discussionId, { $push: { comments: comment._id } });
+        await Discussion.findByIdAndUpdate(discussionId, {
+            $push: { comments: comment._id },
+            $inc: { viewCount: 1 }
+        });
         res.status(201).json({ message: 'Comment created successfully!' });
     } catch (error) {
         res.status(400).json({ error: error.message });
