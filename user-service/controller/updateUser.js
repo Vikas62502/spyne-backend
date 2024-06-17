@@ -7,6 +7,7 @@ const updateUser = async (req, res) => {
         if (!userId) return res.status(400).json({ message: 'User ID is required' });
 
         const { name, mobileNumber, email } = req.body;
+        if(mobileNumber.length !== 10 ) return res.status(400).json({ message: 'Mobile number should be 10 digits' });
         const user = await User.findByIdAndUpdate(userId, {
             name,
             mobileNumber,
