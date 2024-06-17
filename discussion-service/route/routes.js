@@ -4,6 +4,7 @@ import createDiscussion from '../controller/createDiscussion.js';
 import deleteDiscussion from '../controller/deleteDiscussion.js';
 import getDiscussionByTags from '../controller/getDiscussionByTags.js';
 import updateDiscussion from '../controller/updateDiscussion.js';
+import getAllDiscussionBasedOnText from '../controller/getAllDiscussionBasedOnText.js';
 
 // initilized the router
 const router = express.Router();
@@ -12,7 +13,7 @@ router.use(express.json()); // Parse JSON bodies
 router.post('/createDiscussion', auth, createDiscussion)
 router.delete('/deleteDiscussion/:discussionId', auth, deleteDiscussion)
 router.get('/getAllDiscussionsByTags', auth, getDiscussionByTags)
-router.get('/getAllDiscussionBasedOnText', auth, getDiscussionByTags)
+router.get('/getAllDiscussionBasedOnText', auth, getAllDiscussionBasedOnText)
 router.put('/updateDiscussion/:discussionId', auth, updateDiscussion)
 
 

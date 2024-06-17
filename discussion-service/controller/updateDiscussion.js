@@ -2,7 +2,7 @@ import Discussion from "../model/discussionSchema.js";
 
 const updateDiscussion = async (req, res) => {
     try {
-        const discussionId = req.params.id;
+        const { discussionId } = req.params;
         if (!discussionId) return res.status(400).json({ message: 'Discussion id is required' });
         const { text, image, hashtags } = req.body;
         const discussion = await Discussion.findByIdAndUpdate(discussionId, {
