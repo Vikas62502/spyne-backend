@@ -1,4 +1,4 @@
-import User from "../model/UserSchema";
+import User from "../model/UserSchema.js";
 
 const followUser = async (req, res) => {
     try {
