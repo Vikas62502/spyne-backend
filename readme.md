@@ -79,18 +79,20 @@ Now below i have provided the api endpoint you can hit using postman at
 https://app.getpostman.com/join-team?invite_code=81245a8c1d271c3b8c44c2b9c202f1ff&target_code=171e485612ea8a18c19cddc680bfd257
 ```
 
-## Api Endpoints
+## API Endpoints
 
 List of all API endpoints with brief descriptions.
 
-User Service
-Create User: POST /users/signup
-login User: POST /users/login
-Follow Other user : POST /users/followUser/:uidOfOtherUser
-Update User: PUT users/updateUser/:uid
-Delete User: DELETE /users/deleteUser/:id
-Get All List of Users: GET /users/getAllUsers
-Search User by Name: GET /users/searchUserByName/:name
+### User Service
+
+- **Create User**: `POST /users/signup`
+- **Login User**: `POST /users/login`
+- **Follow Other User**: `POST /users/followUser/:uidOfOtherUser`
+- **Update User**: `PUT /users/updateUser/:uid`
+- **Delete User**: `DELETE /users/deleteUser/:id`
+- **Get All List of Users**: `GET /users/getAllUsers`
+- **Search User by Name**: `GET /users/searchUserByName/:name`
+
 
 Discussion Service
 Create Discussion: POST /discussions/createDiscussion
