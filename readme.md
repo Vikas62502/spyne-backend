@@ -94,23 +94,23 @@ List of all API endpoints with brief descriptions.
 - **Search User by Name**: `GET /users/searchUserByName/:name`
 
 
-Discussion Service
-Create Discussion: POST /discussions/createDiscussion
-Update Discussion: POST /discussions/updateDiscussion/:discussionId
-Delete Discussion: DELETE /discussions/deleteDiscussion/:discussionId
-Get Discussion By Tags: GET /discussions/getAllDiscussionsByTags?tags=%23:tagName
-Get Discussion By Text: GET /discussions//getAllDiscussionBasedOnText?text=:SearchText
-Get View Count: GET /discussions/getViewCount/:discussionId
+### Discussion Service
+- **Create Discussion**: `POST /discussions/createDiscussion`
+- **Update Discussion**: `POST /discussions/updateDiscussion/:discussionId`
+- **Delete Discussion**: `DELETE /discussions/deleteDiscussion/:discussionId`
+- **Get Discussion By Tags**: `GET /discussions/getAllDiscussionsByTags?tags=%23:tagName`
+- **Get Discussion By Text**: `GET /discussions//getAllDiscussionBasedOnText?text=:SearchText`
+- **Get View Count**: `GET /discussions/getViewCount/:discussionId`
 
-Like Service
-Create Like: POST /likes/createLike
-Delete Like: DELETE /likes/deleteLike/:LikeId
+### Like Service
+- **Create Like**: `POST /likes/createLike`
+- **Delete Like**: `DELETE /likes/deleteLike/:LikeId`
 
-Comment Service
-Create Comment: POST /comments/createComment
-Reply to Comment: POST /comments/replyComment
-Update Comment : POST /comments/updateComment/:CommentId
-Delete Discussion: DELETE /comments/deleteComment/:CommentId
+### Comment Service
+- **Create Comment**: `POST /comments/createComment`
+- **Reply to** Comment: `POST /comments/replyComment`
+- **Update Comment** : `POST /comments/updateComment/:CommentId`
+- **Delete Discussion**: `DELETE /comments/deleteComment/:CommentId`
 
 ## Microservices
 
@@ -143,8 +143,8 @@ Here is the Data Model architecture Schema
 
 ## Technologies Used
 
-Node.js
-Express.js
-MongoDB
-JWT for authentication
-fast-gateway
+<p>Node.js</p>
+<p>Express.js</p>
+<p>MongoDB</p>
+<p>JWT for authentication</p>
+<p>fast-gateway</p>
