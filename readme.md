@@ -75,6 +75,10 @@ npm start
 
 Now below i have provided the api endpoint you can hit using postman at
 
+Public URL of postman
+```bash
+https://www.postman.com/lunar-capsule-120648/workspace/sypne-sde-i-assignment/collection/34837752-b5b5c2d4-3887-41a9-bb19-08627eafc003
+```
 ```bash
 https://app.getpostman.com/join-team?invite_code=81245a8c1d271c3b8c44c2b9c202f1ff&target_code=171e485612ea8a18c19cddc680bfd257
 ```
