@@ -6,6 +6,11 @@ Spyne SDE-1 Backend-Role Assignment
 
 In this project we are have made a kind of social media project , where a user can login/sign up , and do CRUD operation on Discusssion/Post, like, Comment.
 
+## Important Note
+
+**Note**: I am using a free server on Render, so there may be a cold start issue. All microservices may take more than 30 seconds to respond to the first request.
+
+
 ## Table of Contents
 
 - [Installation](#installation)
